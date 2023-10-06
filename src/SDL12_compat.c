@@ -6207,7 +6207,7 @@ SetVideoModeImpl(int width, int height, int bpp, Uint32 flags12)
     } else if (!VideoWindow20) {  /* create it */
         int x = SDL_WINDOWPOS_UNDEFINED, y = SDL_WINDOWPOS_UNDEFINED;
         Uint32 flags20 = fullscreen_flags20;
-        if (flags12 & SDL12_OPENGL) { flags20 |= SDL_WINDOW_OPENGL; }
+        if (flags12 & SDL12_OPENGL) { flags20 |= SDL_WINDOW_VULKAN; }
         if (flags12 & SDL12_RESIZABLE) { flags20 |= SDL_WINDOW_RESIZABLE; }
         if (flags12 & SDL12_NOFRAME) { flags20 |= SDL_WINDOW_BORDERLESS; }
         if (use_highdpi) { flags20 |= SDL_WINDOW_ALLOW_HIGHDPI; }
